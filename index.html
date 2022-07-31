@@ -1,14 +1,26 @@
 <html>
   <head>
     <style>
-body {
-  background-image: url("images\test.png");
-  background-color: #cccccc;
+    .container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 </style>
     <title>RetroMaidRage</title>
   </head>
   <body>
     <div><center>RetroMaidRage</center></div>
+    <div class="container">
+  <img src="images\test.png" alt="Snow" style="width:100%;">
+  <div class="centered">Centered</div>
+</div>
   </body>
 </html>
