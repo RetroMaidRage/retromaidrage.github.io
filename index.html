@@ -6,6 +6,7 @@
   font-family: Arial, sans-serif;
   background-image: url("https://raw.githubusercontent.com/RetroMaidRage/ImmersiveShaders/main/screenshots/preview.png");
   background-size: 100%;
+
 }
     .container {
   position: relative;
@@ -18,23 +19,121 @@
   position: absolute;
   top: 5%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -177%);
 }
 
 .left-pos {
   position: absolute;
+  font-family: Arial;
    top: 28px;
    left: 55px;
 }
 
+.left2-pos {
+  position: absolute;
+  font-family: Arial;
+   top: 28px;
+   left: 300px;
+}
+
+.left-poslink {
+  position: absolute;
+   top: 45px;
+   left: 83px;
+   color: black;
+}
+
+.left-poslink2 {
+  position: absolute;
+   top: 45px;
+   left: 333px;
+   color: black;
+}
+
+.left-posdescribe {
+  position: absolute;
+  font-size: 15;
+   top: 75px;
+   left: 33px;
+   color: black;
+  background-color: rgba(0,0,0,.2)
+
+}
+
+.left-posdescribee {
+  position: absolute;
+  font-size: 15;
+   top: 75px;
+   left: 270px;
+   color: black;
+  background-color: rgba(0,0,0,.2)
+
+}
+
+.bg {
+  position: absolute;
+  max-width:1920px;
+    max-width:1080px;
+  margin:25px auto;
+   color: black;
+}
+
+.mm-home{
+  position: absolute;
+   top: -3px;
+   left: 28px;
+   color: white;
+   font-size: 25;
+   opacity: 0.95;
+  list-style: none;
+}
+
+.profile{
+  position: absolute;
+   top: -3px;
+   left: 1200px;
+   color: white;
+   font-size: 25;
+   opacity: 0.95;
+  list-style: none;
+}
+
+/* Utility classes */
+.hide {
+  display:none;
+}
+.show {
+  display:block;
+}
+
+
 </style>
-    <title>RetroMaidRage</title>
+    <title>RetroMaidRage: Projects</title>
+
   </head>
   <body>
-    <div><center>RetroMaidRage</center></div>
-    <div class="container">
-  <div class="centered">---------------------------</div>
+
+    <ul class="mm-home">
+      <li><a class="mm-home" href="#home">Home</a></li>
+      <li><a class="profile" href="https://github.com/RetroMaidRage">Profile</a></li>
+    </ul>
+
+
+
+<div style="background-color: rgba(0,0,0,.2);color:white;padding:20px;" ><center>RetroMaidRage: Projects</center></div>
+
+  <div class="container">
+
     <div class="left-pos">ImmersiveShaders</div>
+    <a class="left-poslink" href="https://github.com/RetroMaidRage/ImmersiveShaders">Download</a>
+    <div class="left-posdescribe">ImmersiveShaders  - The<br>this project focused<br> on good optimization<br> and flexible customization.<br>
+    This have a lot functions<br> </div>
+
+    <div class="left2-pos">RevelanceShaders</div>
+    <a class="left-poslink2" href="">Download</a>
+    <a class="left-posdescribee">RevelanceShaders  - The<br>this project is a<br>Vanilla-like Minecraft shader<br>Have a lot of comfortable<br>functions</a>
+
 </div>
+
   </body>
 </html>
