@@ -1,0 +1,297 @@
+body {
+    margin: 0;
+    background-color: black;
+    overflow-x: hidden; /* скрывает горизонтальный скролл */
+    overflow-y: hidden; /* скрывает горизонтальный скролл */
+    display: flex;
+    flex-direction: column;   /* ← ВОТ ЭТО ВАЖНО */
+    align-items: center;
+    cursor: crosshair;
+    min-height: 100vh;
+}
+
+.name{
+    font-family: monospace;
+    font-weight: bold;
+    background-image: linear-gradient(#294CFF, #21E1FF);
+    text-shadow: 0px 2px 0px #BDBDBD, 0px 4px 0px #2E2E2E;
+    color: white;
+    background-clip: text;
+    cursor: vertical-text;
+}
+
+.up-panel {
+    white-space: pre;
+    font-family: monospace;
+    color: #ffffff;
+    text-shadow: 0 0 5px #181818;
+    text-align: center;
+
+    line-height: 1;
+    font-size: 14px;
+    width: 100%;
+
+    padding-top: 0px;    /* увеличиваем верхний отступ */
+}
+
+.up-panel a {
+
+    font-weight: bold;
+    color: #ffffff;        /* делаем цвет как у текста */
+    text-decoration: none;  /* убираем подчёркивание */
+    cursor: pointer;        /* чтобы при наведении был курсор руки */
+}
+
+.up-panel a:hover {
+    /* Можно добавить лёгкий эффект при наведении, например светлее */
+    color: #dddddd;
+    text-decoration:underline;
+}
+
+.center-wrapper {
+display: flex;
+align-items: flex-start;
+justify-content: center;
+gap: 6px;              /* расстояние между блоками */
+margin-top: 8px;
+}
+
+.side-panel {
+    white-space: pre;
+    font-family: monospace;
+    font-size: 12px;
+    color: #BDBDBD;
+    border: 1px dashed #2E2E2E;
+    padding: 0px 65px;
+    min-width: 165px;
+    max-width: 165px;
+    min-height: 578px;
+        background: none;
+}
+
+.left-panel {
+  align-items: flex-start;
+    white-space: pre;
+    text-align: left;
+}
+
+.clp-text {
+      text-align: center;
+}
+
+.logo-text {
+    text-align: center;
+    font-weight: normal;
+    font-family: monospace;
+  /*border: 1px dotted #EDEDED;
+    border-left-color: red;
+    border-right-color: blue;*/
+
+    line-height: 1;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    background-image: linear-gradient(white, #b8b8b8);
+    color: transparent;
+    background-clip: text;
+}
+.logo-text:hover {
+cursor: default;
+}
+
+.right-panel {
+    white-space: pre;
+    text-align: center;
+}
+
+.crp-text {
+      text-align: center;
+}
+
+.pl-wrapper{
+    border: 1px dashed #212121;
+}
+.side-panel-player {
+  text-align: left; /* прижмёт iframe к левому краю */
+  padding: 0;
+  margin: 0;      /* убираем внутренние отступы */
+width: 180px;
+height: 90px;
+overflow: hidden;
+border-radius: 0px;
+    background: none;
+    background-color: red
+  padding: 0px 0px 0px 0px;
+}
+
+.side-panel-player iframe {
+    text-align: left;
+    display: block;  /* превращаем в блочный элемент */
+    margin: 0;       /* убираем все внешние отступы */
+    padding: 0;      /* убираем внутренние отступы */
+    width: 180px;
+    height: 90px;
+}
+
+
+.pos-text {
+  text-decoration:none;
+  display: flex;             /* превращаем в flex */
+flex-direction: column;    /* элементы сверху вниз */
+align-items: center;       /* центрируем по горизонтали */
+text-align: center;        /* центрируем текст внутри inline-элементов */
+margin-top: 0px;          /* немного отступ сверху */
+}
+
+.pos-text a {
+      align-items: center;
+  text-align: center;
+  text-decoration: none;
+  font-family: monospace;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.pos-text w {
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Joystix", monospace;
+  font-style: italic;
+  font-size: 12px;
+  padding: 1ch 1ch;
+  color: #BDBDBD;
+}
+
+.pos-text .cursor {
+color: #BDBDBD;
+}
+
+.pos-text input[type="number"] {
+    background-color: black;      /* фон под стиль сайта */
+    color: #ffffff;               /* текст желтый, как ссылка */
+    border: 2px dashed #212121;    /* рамка желтая */
+    border-radius: 1px;           /* немного скруглений */
+    padding: 1px 1px;             /* внутренние отступы */
+    width: 1ch;
+      text-align: left;                     /* ширина инпута */
+    font-family: monospace;       /* моноширинный шрифт */
+    font-size: 14px;
+    outline: none;                /* убираем стандартный синий контур */
+}
+
+.pos-text input[type="number"]::-webkit-inner-spin-button,
+.pos-text input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.bottom-panel-wrapper {
+  text-align: center;
+  color: white;
+display: flex;
+align-items: flex-start;
+justify-content: center;
+gap: 6px;              /* расстояние между блоками */
+margin-top: 8px;
+}
+
+
+
+.quotes-wrapper {
+  text-align: center;  /* выравниваем содержимое слева */
+  white-space: pre-line;
+  font-family: "Joystix", monospace;
+  font-style: italic;
+  font-size: 12px;
+  color: #BDBDBD;
+}
+
+.quotes-text {
+  white-space: pre-line;
+  display: block;    /* чтобы занимал всю ширину контейнера */
+  font-family: "Joystix", monospace;
+  font-style: italic;
+  font-size: 12px;
+  color: #BDBDBD;
+}
+
+
+
+.ascii-wrapper {
+    border-style:  double;
+    border-color: #676767;
+    padding: 0px 0px 0px 2px;
+    display: flex;
+    justify-content: center; /* центр по горизонтали */
+}
+
+.ascii-art {
+    font-family: monospace;
+    color: #ffffff;
+    white-space: pre; /* сохраняет все пробелы */
+    line-height: 1;
+    font-size: 9px;
+    margin: 0;
+    padding: 0;
+}
+
+.separator {
+    color: #212121;
+}
+
+.italic-text {
+    font-style: italic;
+}
+
+.link {
+  font-weight: bold;
+  color: #BDBDBD;      /* делаем цвет как у текста */
+  text-decoration: underline;  /* убираем подчёркивание */
+  cursor: pointer;        /* чтобы при наведении был курсор руки */
+}
+
+.link :hover {
+    /* Можно добавить лёгкий эффект при наведении, например светлее */
+    color: #dddddd;
+    text-decoration:underline;
+}
+
+.glitch{
+  display: inline-block; /* block */
+  font-family: monospace;
+  font-size: 14px;
+  color: #BDBDBD;
+  white-space: nowrap;
+  overflow:  hidden;
+  text-overflow: ellipsis;
+
+}
+/* OTF */
+@font-face {
+    font-family: "Joystix";
+    src: url("fonts/Joystix.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* TTF (для поддержки старых браузеров) */
+@font-face {
+    font-family: "PixelSans";
+    src: url("fonts/PixelSans.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.cursor {
+    text-align: center;
+    display: inline-block;
+    width: 10px;             /* ширина курсора */
+    animation: blink 1s step-start infinite;
+    color: #ffffff;          /* цвет курсора */
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    50.01%, 100% { opacity: 0; }
+}
