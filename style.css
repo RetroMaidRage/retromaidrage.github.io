@@ -4,10 +4,11 @@ body {
     overflow-x: hidden; /* скрывает горизонтальный скролл */
     overflow-y: hidden; /* скрывает горизонтальный скролл */
     display: flex;
-    flex-direction: column;   /* ← ВОТ ЭТО ВАЖНО */
+    flex-direction: column;
     align-items: center;
     cursor: crosshair;
     min-height: 100vh;
+
 }
 
 .name{
@@ -43,7 +44,7 @@ body {
 }
 
 .up-panel a:hover {
-    /* Можно добавить лёгкий эффект при наведении, например светлее */
+
     color: #dddddd;
     text-decoration:underline;
 }
@@ -246,13 +247,13 @@ margin-top: 8px;
 
 .link {
   font-weight: bold;
-  color: #BDBDBD;      /* делаем цвет как у текста */
-  text-decoration: underline;  /* убираем подчёркивание */
-  cursor: pointer;        /* чтобы при наведении был курсор руки */
+  color: #BDBDBD;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .link :hover {
-    /* Можно добавить лёгкий эффект при наведении, например светлее */
+
     color: #dddddd;
     text-decoration:underline;
 }
@@ -275,7 +276,6 @@ margin-top: 8px;
     font-style: normal;
 }
 
-/* TTF (для поддержки старых браузеров) */
 @font-face {
     font-family: "PixelSans";
     src: url("fonts/PixelSans.ttf") format("truetype");
@@ -286,12 +286,92 @@ margin-top: 8px;
 .cursor {
     text-align: center;
     display: inline-block;
-    width: 10px;             /* ширина курсора */
+    width: 10px;
     animation: blink 1s step-start infinite;
-    color: #ffffff;          /* цвет курсора */
+    color: #ffffff;
 }
 
 @keyframes blink {
     0%, 50% { opacity: 1; }
     50.01%, 100% { opacity: 0; }
+}
+
+
+/*Novels                              */
+body.translations-page {
+  overflow-x: auto; /* скрывает горизонтальный скролл */
+  overflow-y: auto; /* скрывает горизонтальный скролл */
+  cursor: default;
+/*  background-image: linear-gradient(#212121, black); */
+}
+
+.novel-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-left: 15px;   /* отступ слева */
+ margin-right: 15px;  /* отступ справа */
+}
+
+.novel-item {
+  display: flex; /*/эмбиентное освещение тайтла*/
+  gap: 16px;
+  border: 2.5px dashed #2e2e2e;
+  padding: 8px;
+  background-color: #212121;
+
+}
+
+.novel-info {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.novel-info h3 {
+  margin: 0;
+  font-size: 24px;
+  word-spacing: 0px; /* расстояние между словами 10px */
+  border: 2px double #212121;
+  border-bottom-color: #BDBDBD;
+}
+
+.novel-info p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.3;
+  border: 2px double #212121;
+  border-bottom-color: #BDBDBD;
+}
+
+.novel-links {
+  gap: 2px;
+}
+
+.novel-links a {
+  margin-right: 5px;
+  font-size: 20px;
+  text-decoration: underline;
+  color: gray;
+}
+
+.novel-links a:hover {
+  margin-right: 5px;
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+.img-cover {
+    border: 3px solid #2e2e2e;
+  width: auto;    /* нужная ширина */
+  height: auto;    /* сохраняем пропорции */
+}
+
+.icon-default {
+  width: 24px;    /* нужная ширина */
+  height: 24px;    /* сохраняем пропорции */
+padding: 0px,0px,0px,0px;
+margin-bottom: -5px;
 }
