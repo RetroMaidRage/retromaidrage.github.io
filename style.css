@@ -11,6 +11,18 @@ body {
 
 }
 
+body.theme-classic {
+  background-color: black;
+}
+
+body.theme-gray {
+  background-image: linear-gradient(#2b2b2b, #1e1e1e);
+}
+
+body.theme-modern {
+  background-image: linear-gradient(#2b2b2b, #383838, black);
+}
+
 .name{
     font-family: monospace;
     font-weight: bold;
@@ -27,16 +39,13 @@ body {
     color: #ffffff;
     text-shadow: 0 0 5px #181818;
     text-align: center;
-
     line-height: 1;
     font-size: 14px;
     width: 100%;
-
     padding-top: 0px;    /* увеличиваем верхний отступ */
 }
 
 .up-panel a {
-
     font-weight: bold;
     color: #ffffff;        /* делаем цвет как у текста */
     text-decoration: none;  /* убираем подчёркивание */
@@ -44,7 +53,6 @@ body {
 }
 
 .up-panel a:hover {
-
     color: #dddddd;
     text-decoration:underline;
 }
@@ -62,12 +70,12 @@ margin-top: 8px;
     font-family: monospace;
     font-size: 12px;
     color: #BDBDBD;
-    border: 1px dashed #2E2E2E;
+    border: 1px dashed #373737; /*#333232;*/
     padding: 0px 65px;
     min-width: 165px;
     max-width: 165px;
     min-height: 578px;
-        background: none;
+    background: none;
 }
 
 .left-panel {
@@ -188,53 +196,93 @@ color: #BDBDBD;
 }
 
 .bottom-panel-wrapper {
-  text-align: center;
-  color: white;
-display: flex;
-align-items: flex-start;
-justify-content: center;
-gap: 6px;              /* расстояние между блоками */
-margin-top: 8px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  position: relative;
 }
 
-
-
 .quotes-wrapper {
-  text-align: center;  /* выравниваем содержимое слева */
-  white-space: pre-line;
+  text-align: center;
+  flex: 1;
+  color: #BDBDBD;
   font-family: "Joystix", monospace;
   font-style: italic;
   font-size: 12px;
-  color: #BDBDBD;
 }
+
+.settings-wrapper {
+  color: #BDBDBD;
+  font-family: monospace;
+  font-size: 14px;
+  position:  relative;
+  bottom: 15px;
+  margin-left: 1125px;
+  white-space: nowrap;
+  text-align: justify;
+}
+
 
 .quotes-text {
   white-space: pre-line;
-  display: block;    /* чтобы занимал всю ширину контейнера */
+  display: block;
   font-family: "Joystix", monospace;
   font-style: italic;
   font-size: 12px;
   color: #BDBDBD;
 }
-
-
 
 .ascii-wrapper {
     border-style:  double;
     border-color: #676767;
     padding: 0px 0px 0px 2px;
     display: flex;
-    justify-content: center; /* центр по горизонтали */
+    justify-content: center;
 }
 
 .ascii-art {
     font-family: monospace;
     color: #ffffff;
-    white-space: pre; /* сохраняет все пробелы */
+    white-space: pre;
     line-height: 1;
     font-size: 9px;
     margin: 0;
     padding: 0;
+}
+
+.theme-selector {
+    background: transparent;
+    border: 1.5px solid  #BDBDBD;
+    padding: 0px 0px;
+    cursor: pointer;
+    color: #BDBDBD;
+    font-family: monospace;
+    font-size: 14px;
+    text-align: center;
+    line-height: 1;
+    font-weight: bold;
+    transition: all 0.3s ease;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+
+.theme-selector option {
+  background-color: #BDBDBD;
+  color: white;
+  padding: 0px 0px;
+  text-align: center;
+  line-height: 1;
+}
+
+.theme-selector:hover {
+   background: transparent;
+   color: #ffffff;
+   border-color: #ffffff;
 }
 
 .separator {
@@ -364,9 +412,11 @@ body.translations-page {
 }
 
 .img-cover {
-    border: 3px solid #2e2e2e;
+  border: 3px solid #2e2e2e;
   width: auto;    /* нужная ширина */
   height: auto;    /* сохраняем пропорции */
+  max-height: 700px;
+  max-width: 400px;
 }
 
 .icon-default {

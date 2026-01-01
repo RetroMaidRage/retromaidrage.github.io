@@ -1,5 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const input = document.querySelector(".pos-text input[type='number']");
+
+  const selector = document.getElementById("theme-selector");
+
+    // Загружаем сохранённую тему
+    const savedTheme = localStorage.getItem("theme") || "theme-classic";
+    document.body.className = savedTheme;
+
+    // Если есть селектор — синхронизируем
+    if (selector) selector.value = savedTheme;
+
+    // Если есть селектор — слушаем изменение темы
+    if (selector) {
+        selector.addEventListener("change", () => {
+            document.body.className = selector.value;
+            localStorage.setItem("theme", selector.value);
+        });
+}
 
 //////////////////////////////////////////////////////////
 function animationTypingFromText(doc, speed = 100, date) {
