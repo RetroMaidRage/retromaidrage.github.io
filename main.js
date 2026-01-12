@@ -1,21 +1,24 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const selector = document.getElementById("theme-selector");
 
-  const selector = document.getElementById("theme-selector");
-
-    // Загружаем сохранённую тему
     const savedTheme = localStorage.getItem("theme") || "theme-classic";
-    document.body.className = savedTheme;
 
-    // Если есть селектор — синхронизируем
+    document.body.classList.add(savedTheme);
+
     if (selector) selector.value = savedTheme;
 
-    // Если есть селектор — слушаем изменение темы
     if (selector) {
         selector.addEventListener("change", () => {
-            document.body.className = selector.value;
+
+            document.body.classList.remove("theme-classic", "theme-gray", "theme-modern");
+
+            document.body.classList.add(selector.value);
+
             localStorage.setItem("theme", selector.value);
         });
-}
+    }
+
+
 
 //////////////////////////////////////////////////////////
 function animationTypingFromText(doc, speed = 100, date) {

@@ -8,7 +8,19 @@ body {
     align-items: center;
     cursor: crosshair;
     min-height: 100vh;
+}
 
+body.translations-page {
+  margin: 0;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  overflow-x: auto; /* скрывает горизонтальный скролл */
+  overflow-y: auto; /* скрывает горизонтальный скролл */
+  cursor: default;
+/*  background-image: linear-gradient(#212121, black); */
 }
 
 body.theme-classic {
@@ -158,6 +170,16 @@ margin-top: 0px;          /* немного отступ сверху */
   text-decoration: none;
   font-family: monospace;
   font-size: 14px;
+  color: #ffffff;
+}
+
+.pos-text b {
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  font-family: monospace;
+  font-size: 16px;
+  font-weight: bold;
   color: #ffffff;
 }
 
@@ -345,8 +367,14 @@ color: #BDBDBD;
 }
 
 
-/*Novels                              */
+/*Novels*/
 body.translations-page {
+  margin: 0;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
   overflow-x: auto; /* скрывает горизонтальный скролл */
   overflow-y: auto; /* скрывает горизонтальный скролл */
   cursor: default;
@@ -414,9 +442,8 @@ body.translations-page {
 .img-cover {
   border: 3px solid #2e2e2e;
   width: auto;    /* нужная ширина */
-  height: auto;    /* сохраняем пропорции */
-  max-height: 700px;
-  max-width: 400px;
+  height: 400px;    /* сохраняем пропорции */
+  object-fit: cover;
 }
 
 .icon-default {
@@ -424,4 +451,18 @@ body.translations-page {
   height: 24px;    /* сохраняем пропорции */
 padding: 0px,0px,0px,0px;
 margin-bottom: -5px;
+}
+
+.lang-text {
+  align-items: center;
+  text-align: center;
+/*  margin-top: 4px; */
+  text-decoration: none;
+  font-family: "Joystix", monospace;
+  font-size: 16px;
+  word-spacing: 1px;
+
+  padding-bottom: 4px;
+  color: #FFFFFF;
+/*  border-top: 4px dashed #BDBDBD;*/
 }

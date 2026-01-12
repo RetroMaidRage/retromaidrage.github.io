@@ -1,21 +1,23 @@
 document.addEventListener("DOMContentLoaded", () => {
-
-  const selector = document.getElementById("theme-selector");
-
+    const selector = document.getElementById("theme-selector");
 
     const savedTheme = localStorage.getItem("theme") || "theme-classic";
-    document.body.className = savedTheme;
 
+    document.body.classList.add(savedTheme);
 
     if (selector) selector.value = savedTheme;
 
-
     if (selector) {
         selector.addEventListener("change", () => {
-            document.body.className = selector.value;
+          
+            document.body.classList.remove("theme-classic", "theme-gray", "theme-modern");
+
+            document.body.classList.add(selector.value);
+
             localStorage.setItem("theme", selector.value);
         });
-}
+    }
+
 
 //////////////////////////////////////////////////////////
 function animationTypingFromText(doc, speed = 100, date) {
